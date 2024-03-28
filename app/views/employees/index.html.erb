@@ -1,10 +1,12 @@
 <div class="flex-column m-5" style = "height: auto;">
   <h1 class="text-center"> Employees </h1>
+  <div class="p-3">
     <%= form_with(url: employees_path, method: "GET") do |form| %>
     <%= form.label :query, "Search by name:" %>
     <%= form.text_field :query %>
     <%= form.submit 'Search', name: nil %>
     <% end %>
+  </div>
     
   <!--Error Message-->
   <% if flash[:errors] %>
